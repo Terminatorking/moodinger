@@ -1,8 +1,6 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:moodinger/pages/profile_confrim.dart';
-
+import 'package:moodinger/pages/home_page.dart';
 class AccountCard extends StatelessWidget {
   const AccountCard({
     super.key,
@@ -96,7 +94,7 @@ class AccountCard extends StatelessWidget {
                             context,
                             MaterialPageRoute(
                               builder: (context) {
-                                return ProfileConfrim(
+                                return HomePage(
                                   size: size,
                                 );
                               },

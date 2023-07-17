@@ -1,7 +1,4 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-
 import '../widgets/account_card.dart';
 
 class ProfileConfrim extends StatelessWidget {
@@ -9,9 +6,7 @@ class ProfileConfrim extends StatelessWidget {
     super.key,
     required this.size,
   });
-
   final Size size;
-  // switch_account_background
   @override
   Widget build(BuildContext context) {
     return SafeArea(
