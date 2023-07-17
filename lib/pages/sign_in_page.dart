@@ -120,7 +120,18 @@ class _SignInPageState extends State<SignInPage> {
                           ),
                         ),
                         child: const Text("Sign in"),
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return ProfileConfrim(
+                                  size: size,
+                                );
+                              },
+                            ),
+                          );
+                        },
                       ),
                     ),
                     Row(
@@ -135,18 +146,7 @@ class _SignInPageState extends State<SignInPage> {
                           ),
                         ),
                         TextButton(
-                          onPressed: () {
-                            Navigator.pushReplacement(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) {
-                                  return ProfileConfrim(
-                                    size: size,
-                                  );
-                                },
-                              ),
-                            );
-                          },
+                          onPressed: () {},
                           child: const Text(
                             "Sign Up",
                             style: TextStyle(
