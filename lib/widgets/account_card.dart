@@ -1,6 +1,7 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:moodinger/pages/home_page.dart';
+
 class AccountCard extends StatelessWidget {
   const AccountCard({
     super.key,
@@ -24,6 +25,9 @@ class AccountCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ClipRRect(
+            borderRadius: const BorderRadius.all(
+              Radius.circular(15),
+            ),
             child: BackdropFilter(
               filter: ImageFilter.blur(sigmaX: 50, sigmaY: 50),
               child: Container(
