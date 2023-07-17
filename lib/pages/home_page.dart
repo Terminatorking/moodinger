@@ -8,6 +8,21 @@ class HomePage extends StatelessWidget {
   final Size size;
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(
+          elevation: 0,
+          actions: [
+            Image.asset("images/icon_direct.png"),
+          ],
+          backgroundColor: Colors.transparent,
+          title: Image.asset(
+            "images/moodinger_logo.png",
+            width: 130,
+          ),
+        ),
+        backgroundColor: Color(0xff1c1f2e),
+      ),
+    );
   }
 }
