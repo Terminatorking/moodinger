@@ -25,18 +25,32 @@ class HomePage extends StatelessWidget {
           ),
         ),
         backgroundColor: const Color(0xff1c1f2e),
-        body: SingleChildScrollView(
-          physics: const BouncingScrollPhysics(),
-          child: Column(
-            children: [
-              Stories(size: size),
-              const SizedBox(
-                height: 10,
+        body: Column(
+          children: [
+            Stories(size: size),
+            const SizedBox(
+              height: 10,
+            ),
+            SizedBox(
+              width: size.width,
+              height: size.height / 1.4,
+              child: ListView.builder(
+                physics: const BouncingScrollPhysics(),
+                itemCount: 5,
+                itemBuilder: (context, index) {
+                  return Column(
+                    children: [
+                      const TopOfPosts(),
+                      Post(size: size),
+                      const SizedBox(
+                        height: 30,
+                      ),
+                    ],
+                  );
+                },
               ),
-              const TopOfPosts(),
-              Post(size: size)
-            ],
-          ),
+            )
+          ],
         ),
       ),
     );
