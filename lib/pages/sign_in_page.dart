@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:moodinger/pages/profile_confrim.dart';
 import 'package:moodinger/widgets/email_text_field.dart';
 import 'package:moodinger/widgets/password_text_field.dart';
 
@@ -134,7 +135,18 @@ class _SignInPageState extends State<SignInPage> {
                           ),
                         ),
                         TextButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return ProfileConfrim(
+                                    size: size,
+                                  );
+                                },
+                              ),
+                            );
+                          },
                           child: const Text(
                             "Sign Up",
                             style: TextStyle(
