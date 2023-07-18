@@ -49,7 +49,7 @@ class _HomePageState extends State<HomePage> {
               icon: Image.asset(
                 page == 1
                     ? "images/icon_search_navigation_active.png"
-                    : "images/icon_search.png",
+                    : "images/icon_search_navigation.png",
               ),
             ),
             BottomNavigationBarItem(
@@ -136,10 +136,18 @@ class _HomePageState extends State<HomePage> {
                 ),
               ],
             ),
-            SearchPage(),
-            AddPostPage(),
-            FollowingPage(),
-            ProfilePage()
+            SearchPage(
+              size: widget.size,
+            ),
+            AddPostPage(
+              size: widget.size,
+            ),
+            FollowingPage(
+              size: widget.size,
+            ),
+            ProfilePage(
+              size: widget.size,
+            )
           ],
         ),
       ),
