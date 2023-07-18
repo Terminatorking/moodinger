@@ -13,6 +13,48 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: 0,
+          onTap: (value) {
+           
+          },
+          type: BottomNavigationBarType.fixed,
+          backgroundColor: const Color(0xff272b40),
+          items: [
+            BottomNavigationBarItem(
+              label: "",
+              icon: Image.asset("images/icon_active_home.png"),
+            ),
+            BottomNavigationBarItem(
+              label: "",
+              icon: Image.asset("images/icon_search.png"),
+            ),
+            BottomNavigationBarItem(
+              label: "",
+              icon: Image.asset("images/icon_add_navigation.png"),
+            ),
+            BottomNavigationBarItem(
+              label: "",
+              icon: Image.asset("images/icon_activity_navigation.png"),
+            ),
+            BottomNavigationBarItem(
+              label: "",
+              icon: Container(
+                width: 35,
+                height: 35,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage("images/postcover.jpg"),
+                    fit: BoxFit.cover,
+                  ),
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(15),
+                  ),
+                ),
+              ),
+            ),
+          ],
+        ),
         appBar: AppBar(
           elevation: 0,
           actions: [
@@ -33,7 +75,7 @@ class HomePage extends StatelessWidget {
             ),
             SizedBox(
               width: size.width,
-              height: size.height / 1.4,
+              height: size.height / 1.52,
               child: ListView.builder(
                 physics: const BouncingScrollPhysics(),
                 itemCount: 5,
@@ -49,7 +91,7 @@ class HomePage extends StatelessWidget {
                   );
                 },
               ),
-            )
+            ),
           ],
         ),
       ),
