@@ -8,6 +8,8 @@ class ProfilePage extends StatelessWidget {
   final Size size;
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: const Color(0xff1c1f2e),
+    );
   }
 }
