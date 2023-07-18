@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 import '../widgets/search_text_field.dart';
 
@@ -48,6 +49,44 @@ class SearchPage extends StatelessWidget {
               physics: const BouncingScrollPhysics(),
             ),
           ),
+          Container(
+            margin: const EdgeInsets.only(left: 18, right: 18),
+            width: size.width,
+            height: size.height / 1.4,
+            child: GridView.custom(
+              physics: const BouncingScrollPhysics(),
+              gridDelegate: SliverQuiltedGridDelegate(
+                crossAxisCount: 3,
+                repeatPattern: QuiltedGridRepeatPattern.inverted,
+                mainAxisSpacing: 4,
+                crossAxisSpacing: 4,
+                pattern: const [
+                  QuiltedGridTile(2, 1),
+                  QuiltedGridTile(2, 2),
+                  QuiltedGridTile(1, 1),
+                  QuiltedGridTile(1, 1),
+                  QuiltedGridTile(1, 1),
+                ],
+              ),
+              childrenDelegate: SliverChildBuilderDelegate(
+                childCount: 40,
+                (context, index) {
+                  return Container(
+                    margin: const EdgeInsets.only(bottom: 10, left: 10),
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage("images/item${index % 10}.png"),
+                        fit: BoxFit.fill,
+                      ),
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(15),
+                      ),
+                    ),
+                  );
+                },
+              ),
+            ),
+          )
         ],
       ),
     );
