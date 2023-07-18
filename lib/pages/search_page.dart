@@ -18,7 +18,7 @@ class SearchPage extends StatelessWidget {
           Container(
             width: size.width,
             height: 40,
-            margin: const EdgeInsets.fromLTRB(18, 20, 18, 0),
+            margin: const EdgeInsets.fromLTRB(18, 20, 18, 20),
             child: ListView.builder(
               itemCount: 10,
               scrollDirection: Axis.horizontal,
@@ -32,7 +32,8 @@ class SearchPage extends StatelessWidget {
                     ),
                   ),
                   child: const Padding(
-                    padding: EdgeInsets.only(left: 25, right: 25, top: 10),
+                    padding: EdgeInsets.only(
+                        left: 25, right: 25, top: 10, bottom: 10),
                     child: Text(
                       "Text",
                       style: TextStyle(
@@ -46,7 +47,7 @@ class SearchPage extends StatelessWidget {
               },
               physics: const BouncingScrollPhysics(),
             ),
-          )
+          ),
         ],
       ),
     );
