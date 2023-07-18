@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../widgets/following_and_you_tab.dart';
+
 class FollowingPage extends StatefulWidget {
   const FollowingPage({
     super.key,
@@ -58,6 +59,9 @@ class _FollowingPageState extends State<FollowingPage>
               physics: const BouncingScrollPhysics(),
               controller: tabController,
               children: [
+                FollowingAndYouTab(
+                  size: widget.size,
+                ),
                 FollowingAndYouTab(
                   size: widget.size,
                 ),
