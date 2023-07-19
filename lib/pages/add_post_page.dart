@@ -59,8 +59,8 @@ class AddPostPage extends StatelessWidget {
           ),
           Container(
             width: size.width,
-            height: size.height / 1.3,
-            margin: const EdgeInsets.all(18),
+            height: size.height / 1.225,
+            margin: const EdgeInsets.fromLTRB(18, 0, 18, 0),
             child: GridView.custom(
               physics: const BouncingScrollPhysics(),
               gridDelegate: SliverQuiltedGridDelegate(

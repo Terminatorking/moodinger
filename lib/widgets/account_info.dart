@@ -25,7 +25,7 @@ class AccountInfo extends StatelessWidget {
           ),
           color: Color(0xff1c1f2e),
         ),
-        child: Column(
+        child: const Column(
           children: [
             ImageAndNameOfAccount(),
           ],
