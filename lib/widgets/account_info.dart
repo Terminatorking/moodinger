@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 import 'image_and_name_of_account.dart';
 
-
 class AccountInfo extends StatelessWidget {
   const AccountInfo({
     super.key,
@@ -25,9 +24,156 @@ class AccountInfo extends StatelessWidget {
           ),
           color: Color(0xff1c1f2e),
         ),
-        child: const Column(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            ImageAndNameOfAccount(),
+            const ImageAndNameOfAccount(),
+            Container(
+              margin: const EdgeInsets.only(left: 10, top: 15),
+              width: size.width / 2,
+              child: const Text(
+                "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است",
+                textDirection: TextDirection.rtl,
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                ),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 8.0),
+              child: Row(
+                children: [
+                  const SizedBox(
+                    width: 18,
+                  ),
+                  Image.asset(
+                    "images/icon_link.png",
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  const Text(
+                    "Yek.link/Amirahmad",
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xff55b9f7),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(18.0),
+              child: Row(
+                children: [
+                  Image.asset("images/icon_work.png"),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  const Text(
+                    "developer",
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xffc5c5c5),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  Image.asset("images/icon_location.png"),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  const Text(
+                    "IRAN",
+                    style: TextStyle(
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                      color: Color(0xffc5c5c5),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const Row(
+              children: [
+                SizedBox(
+                  width: 18,
+                ),
+                Text(
+                  "23",
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  "Posts",
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xffc5c5c5),
+                  ),
+                ),
+                SizedBox(
+                  width: 18,
+                ),
+                Text(
+                  "16.2K",
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  "Followers",
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xffc5c5c5),
+                  ),
+                ),
+                SizedBox(
+                  width: 18,
+                ),
+                Text(
+                  "280",
+                  style: TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Text(
+                  "Following",
+                  style: TextStyle(
+                    fontSize: 14,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xffc5c5c5),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Container(width: size.width,),
+                Container()
+              ],
+            ),
           ],
         ),
       ),
