@@ -1,5 +1,3 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:moodinger/pages/add_post_page.dart';
 import 'package:moodinger/pages/following_page.dart';
