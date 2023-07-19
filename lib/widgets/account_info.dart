@@ -154,7 +154,7 @@ class _AccountInfoState extends State<AccountInfo>
                 height: widget.size.height / 2,
                 child: TabBarView(
                   controller: tabController,
-                  children: [
+                  children: const [
                     GridViewOfAccountPage(),
                     GridViewOfAccountPage(),
                   ],
