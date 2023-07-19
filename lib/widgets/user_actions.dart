@@ -59,19 +59,19 @@ class UserActions extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              Text(
+                text,
+                style: const TextStyle(
+                  fontSize: 14,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                height: size.width / 50,
+              ),
               Row(
                 children: [
-                  Text(
-                    text,
-                    style: const TextStyle(
-                      fontSize: 14,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  SizedBox(
-                    width: size.width / 70,
-                  ),
                   Text(
                     text2,
                     style: const TextStyle(
@@ -80,25 +80,26 @@ class UserActions extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
+                  SizedBox(
+                    width: size.width / 50,
+                  ),
+                  Text(
+                    text3,
+                    style: const TextStyle(
+                      fontSize: 14,
+                      color: Color(0xffc5c5c5),
+                    ),
+                  ),
                 ],
-              ),
-              SizedBox(
-                height: size.width / 50,
-              ),
-              Text(
-                text3,
-                style: const TextStyle(
-                  fontSize: 14,
-                  color: Color(0xffc5c5c5),
-                ),
               ),
             ],
           ),
+          const Spacer(),
           !isLiked
               ? Container(
-                  width: isFollowing ? null : size.width / 5.10,
+                  width: isFollowing ? null : size.width / 5.1,
                   height: 40,
-                  margin: const EdgeInsets.only(left: 10, right: 10),
+                  margin: const EdgeInsets.only(right: 10),
                   child: ElevatedButton(
                     style: ButtonStyle(
                       backgroundColor: MaterialStateProperty.all(
@@ -137,7 +138,7 @@ class UserActions extends StatelessWidget {
               : Container(
                   width: 60,
                   height: 60,
-                  margin: const EdgeInsets.only(left: 30),
+                  margin: const EdgeInsets.only(right: 10),
                   decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage("images/item2.png"),
