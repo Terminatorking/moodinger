@@ -74,10 +74,9 @@ class AccountCard extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      width: size.width,
+                      width: size.width / 2.5,
                       height: 45,
-                      margin: EdgeInsets.fromLTRB(
-                          size.width / 3.5, 20, size.width / 3.5, 10),
+                      margin: const EdgeInsets.only(top: 20, bottom: 20),
                       child: ElevatedButton(
                         style: ButtonStyle(
                           shape: MaterialStateProperty.all(

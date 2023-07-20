@@ -18,7 +18,7 @@ class SearchPage extends StatelessWidget {
           SearchTextField(size: size),
           Container(
             width: size.width,
-            height: 40,
+            height: 30,
             margin: const EdgeInsets.fromLTRB(18, 20, 18, 20),
             child: ListView.builder(
               itemCount: 10,
@@ -32,15 +32,16 @@ class SearchPage extends StatelessWidget {
                       Radius.circular(15),
                     ),
                   ),
-                  child: const Padding(
-                    padding: EdgeInsets.only(
-                        left: 25, right: 25, top: 10, bottom: 10),
-                    child: Text(
-                      "Text",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
+                  child: const Center(
+                    child: Padding(
+                      padding: EdgeInsets.only(left: 25, right: 25),
+                      child: Text(
+                        "Text",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 14,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   ),
@@ -49,41 +50,41 @@ class SearchPage extends StatelessWidget {
               physics: const BouncingScrollPhysics(),
             ),
           ),
-          Container(
-            margin: const EdgeInsets.only(left: 18, right: 18),
-            width: size.width,
-            height: size.height / 1.4,
-            child: GridView.custom(
-              physics: const BouncingScrollPhysics(),
-              gridDelegate: SliverQuiltedGridDelegate(
-                crossAxisCount: 3,
-                repeatPattern: QuiltedGridRepeatPattern.inverted,
-                mainAxisSpacing: 4,
-                crossAxisSpacing: 4,
-                pattern: const [
-                  QuiltedGridTile(2, 1),
-                  QuiltedGridTile(2, 2),
-                  QuiltedGridTile(1, 1),
-                  QuiltedGridTile(1, 1),
-                  QuiltedGridTile(1, 1),
-                ],
-              ),
-              childrenDelegate: SliverChildBuilderDelegate(
-                childCount: 40,
-                (context, index) {
-                  return Container(
-                    margin: const EdgeInsets.only(bottom: 10, left: 10),
-                    decoration: BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage("images/item${index % 10}.png"),
-                        fit: BoxFit.fill,
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(18, 18, 18, 0),
+              child: GridView.custom(
+                physics: const BouncingScrollPhysics(),
+                gridDelegate: SliverQuiltedGridDelegate(
+                  crossAxisCount: 3,
+                  repeatPattern: QuiltedGridRepeatPattern.inverted,
+                  mainAxisSpacing: 4,
+                  crossAxisSpacing: 4,
+                  pattern: const [
+                    QuiltedGridTile(2, 1),
+                    QuiltedGridTile(2, 2),
+                    QuiltedGridTile(1, 1),
+                    QuiltedGridTile(1, 1),
+                    QuiltedGridTile(1, 1),
+                  ],
+                ),
+                childrenDelegate: SliverChildBuilderDelegate(
+                  childCount: 40,
+                  (context, index) {
+                    return Container(
+                      margin: const EdgeInsets.fromLTRB(0, 0, 10, 10),
+                      decoration: BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("images/item${index % 10}.png"),
+                          fit: BoxFit.fill,
+                        ),
+                        borderRadius: const BorderRadius.all(
+                          Radius.circular(15),
+                        ),
                       ),
-                      borderRadius: const BorderRadius.all(
-                        Radius.circular(15),
-                      ),
-                    ),
-                  );
-                },
+                    );
+                  },
+                ),
               ),
             ),
           )

@@ -150,9 +150,7 @@ class _HomePageState extends State<HomePage> {
                 const SizedBox(
                   height: 10,
                 ),
-                SizedBox(
-                  width: widget.size.width,
-                  height: widget.size.height / 1.7,
+                Expanded(
                   child: ListView.builder(
                     physics: const BouncingScrollPhysics(),
                     itemCount: 5,

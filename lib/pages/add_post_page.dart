@@ -57,46 +57,46 @@ class AddPostPage extends StatelessWidget {
               ],
             ),
           ),
-          Container(
-            width: size.width,
-            height: size.height / 1.225,
-            margin: const EdgeInsets.fromLTRB(18, 0, 18, 0),
-            child: GridView.custom(
-              physics: const BouncingScrollPhysics(),
-              gridDelegate: SliverQuiltedGridDelegate(
-                crossAxisCount: 3,
-                mainAxisSpacing: 4,
-                crossAxisSpacing: 4,
-                pattern: const [
-                  QuiltedGridTile(3, 3),
-                  QuiltedGridTile(1, 1),
-                  QuiltedGridTile(1, 1),
-                  QuiltedGridTile(1, 1),
-                  QuiltedGridTile(1, 1),
-                  QuiltedGridTile(1, 1),
-                  QuiltedGridTile(1, 1),
-                  QuiltedGridTile(1, 1),
-                  QuiltedGridTile(1, 1),
-                  QuiltedGridTile(1, 1),
-                ],
-              ),
-              childrenDelegate: SliverChildBuilderDelegate(
-                childCount: 40,
-                (context, index) {
-                  return Container(
-                    margin: const EdgeInsets.only(
-                        top: 8, left: 5, right: 5, bottom: 8),
-                    decoration: BoxDecoration(
-                      borderRadius: const BorderRadius.all(
-                        Radius.circular(15),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.fromLTRB(18, 18, 18, 0),
+              child: GridView.custom(
+                physics: const BouncingScrollPhysics(),
+                gridDelegate: SliverQuiltedGridDelegate(
+                  crossAxisCount: 3,
+                  mainAxisSpacing: 4,
+                  crossAxisSpacing: 4,
+                  pattern: const [
+                    QuiltedGridTile(3, 3),
+                    QuiltedGridTile(1, 1),
+                    QuiltedGridTile(1, 1),
+                    QuiltedGridTile(1, 1),
+                    QuiltedGridTile(1, 1),
+                    QuiltedGridTile(1, 1),
+                    QuiltedGridTile(1, 1),
+                    QuiltedGridTile(1, 1),
+                    QuiltedGridTile(1, 1),
+                    QuiltedGridTile(1, 1),
+                  ],
+                ),
+                childrenDelegate: SliverChildBuilderDelegate(
+                  childCount: 40,
+                  (context, index) {
+                    return Container(
+                      margin: const EdgeInsets.only(
+                          top: 8, left: 5, right: 5, bottom: 8),
+                      decoration: BoxDecoration(
+                        borderRadius: const BorderRadius.all(
+                          Radius.circular(15),
+                        ),
+                        image: DecorationImage(
+                          image: AssetImage("images/item${index % 10}.png"),
+                          fit: BoxFit.cover,
+                        ),
                       ),
-                      image: DecorationImage(
-                        image: AssetImage("images/item${index % 10}.png"),
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                  );
-                },
+                    );
+                  },
+                ),
               ),
             ),
           ),
